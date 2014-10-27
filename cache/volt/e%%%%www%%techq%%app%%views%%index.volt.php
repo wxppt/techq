@@ -9,11 +9,13 @@
         <?php echo $this->tag->stylesheetLink('styles/ppt-icon.css'); ?>
         <?php echo $this->tag->stylesheetLink('styles/index.css'); ?>
         <?php echo $this->tag->stylesheetLink('styles/register.css'); ?>
+        <?php echo $this->tag->stylesheetLink('styles/user.css'); ?>
+        <?php echo $this->tag->stylesheetLink('styles/admin.css'); ?>
+        <?php echo $this->tag->javascriptInclude('scripts/jquery-1.11.1.min.js'); ?>
+        <?php echo $this->tag->javascriptInclude('scripts/global.js'); ?>
     </head>
     <body>
         <?php echo $this->getContent(); ?>
-        <?php echo $this->tag->javascriptInclude('scripts/jquery-1.11.1.min.js'); ?>
-        <?php echo $this->tag->javascriptInclude('scripts/index.js'); ?>
     </body>
 </html>
 <?php } else { ?>

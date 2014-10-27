@@ -1,15 +1,4 @@
 $(document).ready(function() {
-	var $selectedNav = $($(".indexNav:first")[0]);
-	$(".indexNav").mouseover(function() {
-		$(".indexNavSlct").animate({"margin-left":"" + parseInt($(this).offset().left - $(".indexNavCtn").offset().left)},200);
-	});
-	$(".indexNavCtn").mouseleave(function() {
-		$(".indexNavSlct").animate({"margin-left":"" + parseInt($selectedNav.offset().left - $(".indexNavCtn").offset().left)},200);
-	});
-	$(".indexNav").click(function() {
-		$selectedNav = $(this);
-	});
-
 	readyToLogin();
     $("#emailInput").bind("click",readyToLogin);
     $("#emailInput").bind("keyup",readyToLogin);
@@ -18,25 +7,6 @@ $(document).ready(function() {
 
 	$("#registerBtn").click(register);
 });
-
-var register = function() {
-    var nickname = $("#unameInput").val();
-    var pw1 = $("#pwInput1").val();
-    var pw2 = $("#pwInput2").val();
-    var email = $("#emailInput").val();
-    
-    if(pw1 != pw2) {
-        alert("两次密码不一致！");
-    }　else {
-        $.post("/TechQ/user/register", {
-            "nickname":nickname,
-            "password":pw1,
-            "email":email
-        }, function(data) {
-            alert(data);
-        });
-    }
-}
 
 var login = function() {
 	var email = $("#emailInput").val();

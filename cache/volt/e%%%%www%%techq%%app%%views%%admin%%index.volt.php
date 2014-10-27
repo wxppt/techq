@@ -1,10 +1,10 @@
-{{ content() }}
+<?php echo $this->getContent(); ?>
 <script src="scripts/admin.js"></script>
 <div class="indexLeft">
     <div class="indexNavCtn">
         <div class="indexNavSlct">
         </div>
-        {{ elements.getTabs() }}
+        <?php echo $this->elements->getTabs(); ?>
     </div>
     <div class="user-statistics">
     	<div class="stat-block" style="background-color:#00b354;">活动用户：<a href="#">200</a></div>

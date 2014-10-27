@@ -1,4 +1,4 @@
-{{content()}}
+<?php echo $this->getContent(); ?>
 
 <script src="scripts/register.js"></script>
 <div class="registerPanel">

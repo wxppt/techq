@@ -1,14 +1,10 @@
 <?php echo $this->getContent(); ?>
-
+<script src="scripts/index.js"></script>
 <div class="indexLeft">
     <div class="indexNavCtn">
         <div class="indexNavSlct">
         </div>
-        <button class="indexNav">最新推荐</button>
-        <button class="indexNav">高分求解</button>
-        <button class="indexNav">三日最热</button>
-        <button class="indexNav">本周最热</button>
-        <button class="indexNav">本月最热</button>
+        <?php echo $this->elements->getTabs(); ?>
     </div>
 
     <div class="indexQuesCtn">
@@ -61,14 +57,4 @@
         </div>
     </div>
     
-</div>
-<div class="indexRight">
-    <div class="indexLogin">
-        <div class="panelTitle">登录</div>
-        <div class="indexLoginForm">
-            <input type="text" id="emailInput" placeholder="请输入邮箱">
-            <input type="password" id="pwInput" placeholder="请输入密码">
-            <button class="loginBtn" id="loginBtn" value="登录">登&nbsp;&nbsp;&nbsp;录</button>
-        </div>
-    </div>
 </div>

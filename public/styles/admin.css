@@ -1,0 +1,88 @@
+.user-statistics {
+	width: 100%;
+	height: 77px;
+	overflow: hidden;
+	padding-top: 2px;
+
+}
+
+.stat-block {
+	width: 264px;
+	height:55px;
+	float: left;
+	background-color: green;
+	text-align: center;
+	padding-top: 20px;
+	margin-left: 2px;
+	color: white;
+}
+
+.stat-block a {
+	color: white;
+	font-size: 24px;
+}
+
+.stat-block a:hover {
+	text-shadow:0 0 0.2em #ffffff;
+}
+
+.user-operation {
+	width: 100%;
+	height: 36px;
+	overflow: hidden;
+	background-color: #bfbfbf;
+	border-bottom: 1px solid gray;
+}
+
+.user-operation>button {
+	height: 30px;
+	width: 60px;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+
+.user-operation>button:hover {
+	background-color: white;
+}
+
+.user-operation>button:active {
+	background-color: gray;
+}
+
+.user-operation>input {
+	float: right;
+	height: 20px;
+	margin-top: 6px;
+	margin-right: 20px;
+	padding: 1px 3px 1px 3px;
+
+}
+
+.user-result {
+	width: 100%;
+	height: auto;
+}
+
+.user-result>table {
+	width: 100%;
+}
+
+.user-result img {
+	height:50px;
+	padding: 5px 0 0 20px;
+}
+
+.user-result th {
+	background-color: #bfbfbf;
+	font-weight: normal;
+	color: black;
+	height: 30px;
+}
+
+.user-result td {
+	text-align: center;
+}
+
+.user-result .selectedRow {
+	background-color: #c0e3ff;
+}
