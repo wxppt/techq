@@ -8,7 +8,7 @@ class IndexController extends BaseController {
 
     public function indexAction()
     {
-        
+        echo '<script>var $selectedNav = $("latest-Nav");</script>';
     }
     
 }

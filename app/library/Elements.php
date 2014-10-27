@@ -41,16 +41,16 @@ class Elements extends Component {
         $auth = $this->session->get('auth');
         switch ($controllerName) {
             case 'index':
-            echo '<button class="indexNav">最新推荐</button>';
+            echo '<button class="indexNav" id="index-latest-nav">最新推荐</button>';
             echo '<button class="indexNav">高分求解</button>';
             echo '<button class="indexNav">三日最热</button>';
             echo '<button class="indexNav">本周最热</button>';
             echo '<button class="indexNav">本月最热</button>';
             break;
             case 'admin':
-            echo '<button class="indexNav">用户管理</button>';
-            echo '<button class="indexNav">问题管理</button>';
-            echo '<button class="indexNav">标签管理</button>';
+            echo '<button class="indexNav" id="admin-user-nav">用户管理</button>';
+            echo '<button class="indexNav" id="admin-question-nav">问题管理</button>';
+            echo '<button class="indexNav" id="admin-tag-nav">标签管理</button>';
             break;
             case 'usercenter':
             echo '<button class="indexNav">最新推荐</button>';

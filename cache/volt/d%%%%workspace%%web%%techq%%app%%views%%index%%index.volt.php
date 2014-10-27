@@ -1,5 +1,5 @@
 <?php echo $this->getContent(); ?>
-
+<script src="scripts/index.js"></script>
 <div class="indexLeft">
     <div class="indexNavCtn">
         <div class="indexNavSlct">

@@ -40,7 +40,7 @@
     </div>
     <?php } else { ?>
     <div class="userHead">
-        <img src="images/3.png"></img>
+        <img src="/TechQ/images/3.png"></img>
         <div class="userInfo"><?php echo $username; ?><span></span></div>
     </div>
     <div class="userStatistics">

@@ -1,5 +1,8 @@
 $(document).ready(function() {
 	$("#registerBtn").click(register);
+    $("#backBtn").click(function() {
+        window.location = "/TechQ   ";
+    });
 });
 
 var register = function() {
@@ -16,7 +19,11 @@ var register = function() {
             "password":pw1,
             "email":email
         }, function(data) {
-            alert(data);
-        });
+            if(data["fbCode"] == 1) {
+                window.location = "/TechQ/";
+            } else {
+                alert(data["message"]);
+            }
+        },"json");
     }
 }

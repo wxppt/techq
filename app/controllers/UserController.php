@@ -50,12 +50,33 @@ class UserController extends BaseController {
         $user->intro = "";
 
         if($user->save() == true) {
-            echo "Register OK";
+            $this->session->set('auth', array(
+                'uid' => $user->uid,
+                'role' => $user->role
+            ));
+            echo json_encode(array('fbCode' => 1, 'message' => '注册成功' ));
         } else {
-            echo "Sorry, the following problems were generated:\n";
-            foreach ($user->getMessages() as $message) {
-                echo $message->getMessage(), "\n";
+            echo json_encode(array('fbCode' => -1, 'message' => '注册失败' ));
+            // echo "Sorry, the following problems were generated:\n";
+            // foreach ($user->getMessages() as $message) {
+            //     echo $message->getMessage(), "\n";
+            // }
+        }
+    }
+
+    public function deleteAction() {
+        $uid = $this->request->getpost("uid","int");
+        $user = User::findFirst("uid='$uid'");
+        if($user) {
+            if($this->session->get('auth')['uid'] == $uid) {
+                echo json_encode(array('fbCode' => -1, 'message' => '不可以删除自己'));
+            } else {
+                $user->delete();
+                echo json_encode(array('fbCode' => 0, 'message' => '删除成功'));
             }
+            
+        } else {
+            echo json_encode(array('fbCode' => -1, 'message' => '找不到UID为'.$uid.'的用户'));
         }
     }
 }

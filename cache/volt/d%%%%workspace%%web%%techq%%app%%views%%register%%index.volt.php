@@ -1,6 +1,6 @@
 <?php echo $this->getContent(); ?>
 
-
+<script src="scripts/register.js"></script>
 <div class="registerPanel">
     <div class="panelTitle">加入TechQ</div>
     <div class="registerForm">
@@ -59,7 +59,7 @@
                     <td colspan="3">
                         <div class="registerBtnCtn">
                             <button class="registerBtn" id="registerBtn">注册</button>
-                            <button class="registerBtn">返回</button>
+                            <button class="registerBtn" id="backBtn">返回</button>
                         </div>
                     </td>
                 </tr>
