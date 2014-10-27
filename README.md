@@ -1,4 +1,8 @@
-techq
+TechQ
 =====
 
-php project based on phalcon
+This is a question asking website about IT.
+
+Use php with phalcon.
+
+OK, alright. It's my homework ///= =///
