@@ -4,9 +4,19 @@ class BaseController extends \Phalcon\Mvc\Controller {
 
     protected function initialize() {
         $this->view->setVar("isAjax", $this::isAjax());
+        $this->view->setVar("ROOT_PATH", '/TechQ/');
         if(!$this::isAjax()) {
             $this->tag->prependTitle('TechQ | ');
-            $this->view->setTemplateAfter('main');
+            $this->view->setTemplateAfter("main");
+            $auth = $this->session->get('auth');
+            if($auth) {
+                $uid = $auth['uid'];
+                $curUser = User::findFirst("uid='$uid'");
+                $this->view->setVar("isLogin", true);
+                $this->view->setVar("username", $curUser->nickname);
+            } else {
+                $this->view->setVar("isLogin", false);
+            }
         }
     }
 

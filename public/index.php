@@ -8,6 +8,7 @@ use Phalcon\Config\Adapter\Ini as ConfigIni;
 
 try {
     define('APP_PATH', realpath('..') . '/');
+    define('ROOT_PATH', '/TechQ/');
 
     $config = new ConfigIni(APP_PATH . 'app/config/config.ini');
 

@@ -19,7 +19,6 @@
 .indexRight {
 	float:right;
 	width: 350px;
-	min-height: 260px;
 	height: auto;
 	background-color: white;
 }

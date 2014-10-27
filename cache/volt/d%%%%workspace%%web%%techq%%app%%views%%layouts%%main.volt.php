@@ -1,11 +1,11 @@
 <header>
     <div class="headerMain">
-        <a class="undecorate"  href= {{ ROOT_PATH }} >
+        <a class="undecorate"  href= <?php echo $ROOT_PATH; ?> >
             <div class="logoCtn"></div>
         </a>
         <div class="vMiddle hCtnLeft">
         <table><tbody><tr>
-        <td class="logoDesc"><div><a class="undecorate"  href= {{ ROOT_PATH }} >问答社区</a><div></td>
+        <td class="logoDesc"><div><a class="undecorate"  href= <?php echo $ROOT_PATH; ?> >问答社区</a><div></td>
         <td>
             <div class="searchCtn">
             <input class="searchInput" type="text" placeholder="搜索问题、用户..." />
@@ -19,17 +19,17 @@
         </div>
         <div class="vMiddle hCtnRight">
         <table><tbody><tr>
-        {{ elements.getMenu() }}
+        <?php echo $this->elements->getMenu(); ?>
         </tr></tbody></table>
         </div>
     </div>
 </header>
 
 <div class="main">
-    {{ flash.output() }}
-    {{ content() }}
+    <?php echo $this->flash->output(); ?>
+    <?php echo $this->getContent(); ?>
     <div class="indexRight">
-    {% if not isLogin %}
+    <?php if (!$isLogin) { ?>
     <div class="indexLogin">
         <div class="panelTitle">登录</div>
         <div class="indexLoginForm">
@@ -38,10 +38,10 @@
             <button class="loginBtn" id="loginBtn" value="登录">登&nbsp;&nbsp;&nbsp;录</button>
         </div>
     </div>
-    {% else %}
+    <?php } else { ?>
     <div class="userHead">
         <img src="images/3.png"></img>
-        <div class="userInfo">{{ username }}<span></span></div>
+        <div class="userInfo"><?php echo $username; ?><span></span></div>
     </div>
     <div class="userStatistics">
         <table>
@@ -52,6 +52,6 @@
             </tbody>
         </table>
     </div>
-    {% endif %}
+    <?php } ?>
 </div>
 </div>

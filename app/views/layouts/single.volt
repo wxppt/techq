@@ -28,30 +28,4 @@
 <div class="main">
     {{ flash.output() }}
     {{ content() }}
-    <div class="indexRight">
-    {% if not isLogin %}
-    <div class="indexLogin">
-        <div class="panelTitle">登录</div>
-        <div class="indexLoginForm">
-            <input type="text" id="emailInput" placeholder="请输入邮箱">
-            <input type="password" id="pwInput" placeholder="请输入密码">
-            <button class="loginBtn" id="loginBtn" value="登录">登&nbsp;&nbsp;&nbsp;录</button>
-        </div>
-    </div>
-    {% else %}
-    <div class="userHead">
-        <img src="images/3.png"></img>
-        <div class="userInfo">{{ username }}<span></span></div>
-    </div>
-    <div class="userStatistics">
-        <table>
-            <tbody>
-                <tr>
-                    <td style="border-left:0;"><span>提问</span><br/>1</td><td><span>回答</span><br/>1</td><td><span>受助</span><br/>1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-</div>
 </div>

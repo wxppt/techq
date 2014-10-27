@@ -9,6 +9,7 @@
         {{ stylesheet_link('styles/ppt-icon.css') }}
         {{ stylesheet_link('styles/index.css') }}
         {{ stylesheet_link('styles/register.css') }}
+        {{ stylesheet_link('styles/user.css') }}
     </head>
     <body>
         {{ content() }}
