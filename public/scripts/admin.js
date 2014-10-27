@@ -24,6 +24,9 @@ $(document).ready(function() {
 				}
 			},"json");
 		}
-		
+	});
+
+	$("#admin-user-add").click(function() {
+		showGlassDiv();
 	});
 });

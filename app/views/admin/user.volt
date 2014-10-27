@@ -14,7 +14,7 @@
     </div>
 
     <div class="user-operation">
-    	<button style="margin-left:20px;">增</button>
+    	<button id="admin-user-add" style="margin-left:20px;">增</button>
     	<button id="admin-user-delete">删</button>
     	<button>改</button>
     	<button>封禁</button>
