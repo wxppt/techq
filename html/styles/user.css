@@ -1,0 +1,56 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.userLeft {
+	width:25%;
+	min-width: 300px;
+	height: 600px;
+	float:left;
+}
+
+.userRight {
+	width:71%;
+	min-width: 750px;
+	height: 600px;
+	float:right;
+	background-color: gray;
+}
+
+
+.userHead {
+	height: 72px;
+	margin: 20px;
+}
+
+.userHead img {
+	width: 72px;
+	float: left;
+}
+
+.userHead .userInfo {
+	margin-left: 20px;
+	float: left;
+}
+
+.userStatistics {
+	width:100%;
+
+}
+
+.userStatistics>table {
+	width:100%;
+	margin-bottom: 10px;
+}
+
+.userStatistics>table tr {
+	height: 50px;
+}
+.userStatistics>table td {
+	text-align: center;
+	border-left: 1px solid #dddddd;
+}

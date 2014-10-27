@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <link href="styles/index.css" rel="stylesheet" type="text/css">
+        <link href="styles/register.css" rel="stylesheet" type="text/css">
+		<title>TechQ - IT问答社区</title>
+        <script src="scripts/jquery-1.11.1.min.js"></script>
+    	<script src="scripts/index.js"></script>
+	</head>
+
+<body>
+	<header>
+        <a class="undecorate"  href="javascript:;">
+        	<div class="logoCtn"></div>
+        </a>
+        <div class="vMiddle hCtnLeft">
+        <table><tbody><tr>
+        <td class="logoDesc"><div><a class="undecorate"  href="javascript:;">问答社区</a><div></td>
+        <td>
+            <div class="searchCtn">
+            <input class="searchInput" type="text" placeholder="搜索问题、用户..." />
+            <input class="searchBtn ppticon" type="submit" value="0" />
+            </div>
+        </td>
+        <td>
+            <a class="headerFunc undecorate" href="javascript:;" style="margin-left:20px;">我要提问</a>
+        </td>
+        </tr></tbody></table>
+        </div>
+        <div class="vMiddle hCtnRight">
+        <table><tbody><tr>
+        <td class="headerFunc" style="padding-right:100px;display:none;"><a class="undecorate" href="javascript:;"><span class="ppticon">2 </span>创建新用户</a></td>
+        <td class="headerFunc" style="padding-right:100px;"><a class="undecorate" href="javascript:;"><span class="ppticon">3 </span>登录</a></td>
+        </tr></tbody></table>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="registerPanel">
+            <div class="panelTitle">加入TechQ</div>
+            <div class="registerForm">
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td class="formTitle">用户名</td>
+                            <td><input class="textInput" type="text" placeholder="请输入用户名"></td>
+                            <td class="formDesc">用户名由字母或中文开头，长度大于4字节</td>
+
+                        </tr>
+                        <tr>
+                            <td class="formTitle">密码</td>
+                            <td><input class="textInput" type="password" placeholder="请输入密码"></td>
+                            <td class="formDesc">密码由字母数字组成，长度大于6位</td>
+
+                        </tr>
+                        <tr>
+                            <td class="formTitle">确认密码</td>
+                            <td><input class="textInput" type="password" placeholder="请再次输入密码"></td>
+                            <td class="formDesc">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td class="formTitle">擅长领域</td>
+                            <td colspan="2">
+                                <table style="margin-left:30px;">
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="goodAt" value="c">C</td>
+                                            <td><input type="checkbox" name="goodAt" value="cpp">C++</td>
+                                            <td><input type="checkbox" name="goodAt" value="java">Java</td>
+                                            <td><input type="checkbox" name="goodAt" value="python">Python</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="goodAt" value="Perl">Perl</td>
+                                            <td><input type="checkbox" name="goodAt" value="Ruby">Ruby</td>
+                                            <td><input type="checkbox" name="goodAt" value="Basic">Basic</td>
+                                            <td><input type="checkbox" name="goodAt" value=".NET">.NET</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="checkbox" name="goodAt" value="Javascript">Javascript</td>
+                                            <td><input type="checkbox" name="goodAt" value="Web">Web开发</td>
+                                            <td><input type="checkbox" name="goodAt" value="Other">Other</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="registerBtnCtn">
+                <button class="registerBtn">注册</button>
+                <button class="registerBtn">返回</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,332 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.ppticon {
+	font-family: 'ppticon';
+}
+
+* {
+	font-family: 微软雅黑, Microsoft YaHei UI;
+}
+
+body {
+	margin: 0px;
+	min-width: 1366px;
+	background-color: #6dabde; 
+}
+
+button,textarea {
+	outline: none;
+}
+
+input {
+	outline: none;
+	border-radius: 0px;
+	padding-left: 3px;
+}
+
+header {
+	background-color: #222222;
+	height: 50px;
+	border-bottom: 1px solid gray;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.undecorate {
+	text-decoration: none;
+	color: inherit;
+}
+
+.logoCtn {
+	float: left;
+	background-image: url(../images/Logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 80px;
+	height: 40px;
+	margin-top: 5px;
+}
+
+.hCtnLeft {
+	float: left;
+	height: 100%;
+}
+
+.hCtnRight {
+	float: right;
+	height: 100%;
+}
+
+.logoDesc {
+	color: white;
+	font-size: 20px;
+	width: auto;
+	height: 100%;
+	padding-left: 10px;
+}
+
+.headerFunc {
+	color: #eeeeee;
+	font-size: 15px;
+	width: auto;
+	height: 100%;
+	padding-right: 50px;
+}
+
+.headerFunc:hover {
+	color: #ffffff;
+	text-shadow:0 0 0.2em #ffffff;
+}
+
+.vMiddle table {
+	height: 100%;
+	width: 100%;
+}
+
+.searchCtn {
+	width:242px;
+	height: 30px;
+	background-color: white;
+	border-radius: 5px;
+	margin-left: 50px;
+}
+
+.searchInput {
+	margin: 5px;
+	border: 0;
+	width:200px;
+	float: left;
+	outline:none;
+}
+
+.searchBtn {
+	float: left;
+	width: 30px;
+	height: 30px;
+	border: 0;
+	border-radius: 5px;
+	outline: none;
+	background-color: white;
+	color: gray;
+}
+
+.searchBtn:hover {
+	color: black;
+}
+
+
+
+
+.main {
+	margin: auto;
+	margin-top: 50px;
+	width:80%;
+	height: 500px;
+}
+
+
+
+.indexLeft {
+	float:left;
+	width: 70%;
+	height: auto;
+	min-height: 600px;
+	margin-bottom: 50px;
+	background-color: white;
+}
+
+.indexRight {
+	float:right;
+	width: 28%;
+	height: auto;
+	background-color: white;
+}
+
+.indexNavCtn {
+	width: 100%;
+	height: 45px;
+	border-bottom: 1px solid gray;
+}
+
+.indexNavSlct {
+	height:3px;
+	width:90px;
+	background-color: #0c7adf;
+}
+
+.indexNav {
+	height: 42px;
+	width: 90px;
+	text-align: center;
+	font-size: 14px;
+	float: left;
+	border: 0;
+	outline: none;
+	background-color: white;
+}
+
+.indexQuesCtn {
+	width: 100%;
+	height: auto;
+}
+
+.questionCtn {
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px dashed #dddddd;
+	overflow: hidden;
+}
+
+.questionStatus {
+	float: left;
+	color: gray;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 30px;
+	font-size: 14px;
+}
+
+.vMargin {
+	height:80px;
+	width: 1px;
+	background-color: #dddddd;
+	margin-top: 10px;
+	float: left;
+}
+
+.questionDetail {
+	width:630px;
+	height: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	float: left;
+	padding:10px 10px 10px 20px;
+}
+
+.questionStatusIcon {
+	width: 40px;
+	height: 40px;
+	margin: 20px 0px 10px 30px;
+	border-radius: 20px;
+}
+
+.questionStatusIcon .ppticon {
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 20px;
+}
+
+.questionStatusCnt {
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+
+.questionName {
+	width:100%;
+	height: 30px;
+	font-size: 20px;
+}
+
+.questionName span {
+	font-size: 16px;
+	color: gray;
+	margin-left: 2px;
+}
+
+.questionDesc {
+	font-size: 14px;
+	color: gray;
+}
+
+.questionTag {
+	font-size: 14px;
+	background-color: #f2854c;
+	color: white;
+	border-radius: 5px;
+	padding:0px 5px 0px 7px;
+	margin-top: 10px;
+	margin-right: 10px;
+	float: left;
+}
+
+.questionTag a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.questionTime {
+	float: right;
+	font-size: 14px;
+	padding:0px 5px 0px 7px;
+	margin-top: 10px;
+	color: gray;
+}
+
+.questionUser {
+	float: right;
+	font-size: 14px;
+	padding:0px 5px 0px 7px;
+	margin-top: 10px;
+	color: gray;
+}
+
+.questionUser a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.questionUser a:hover {
+	text-decoration: underline;
+}
+
+.indexLogin {
+	width: 100%;
+	height: 250px;
+	margin: auto;
+}
+
+.panelTitle {
+	height: 37px;
+	border-bottom: 1px solid gray;
+	font-size: 20px;
+	padding-top: 8px;
+	padding-left: 25px;
+}
+
+.indexLoginForm {
+	width: 255px;
+	margin: auto;
+}
+
+
+.indexLoginForm input {
+	width: 240px;
+	height: 30px;
+	margin-top: 20px; 
+	font-size: 18px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.indexLoginForm button {
+	width: 254px;
+	height: 36px;
+	margin-top: 20px; 
+	font-size: 18px;
+	border: 0;
+	background-color: #0073dd;
+	color: white;
+}
+
+.indexLoginForm button:hover {
+	background-color: #1480e3;
+}

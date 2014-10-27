@@ -1,0 +1,28 @@
+* {
+	font-family: 微软雅黑, Microsoft YaHei UI, Ubuntu;
+	outline: none;
+}
+
+body {
+	margin: 0px;
+	min-width: 1200px;
+	background-color: #6dabde; 
+}
+
+input,button,textarea {
+	border-radius: 0px;
+	border: 1px solid #888888;
+}
+
+.textInput {
+	outline: none;
+	border-radius: 0px;
+	border: 1px solid #888888;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.undecorate {
+	text-decoration: none;
+	color: inherit;
+}

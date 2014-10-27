@@ -1,0 +1,27 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.askForm {
+	width: 90%;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.askForm>table {
+	width: 100%;
+}
+
+.askForm>table table {
+	width: 100%;
+}
+
+.askForm .askInput {
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}

@@ -1,0 +1,165 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.questionTitle {
+	height: 70px;
+	border-bottom: 1px solid gray;
+	font-size: 20px;
+	padding: 15px 10px 0px 25px;
+	padding-left: 25px;
+}
+
+.questionScore {
+	font-size: 14px;
+	float: left;
+	margin-top: 10px;
+	margin-right: 10px;
+	color: gray;
+}
+
+.questionImg {
+	width: 90%;
+	border: 1px solid gray;
+	padding:3px;
+	margin:10px;
+}
+
+.answerForm {
+	padding-left:30px;
+	padding-top:20px;
+	border-bottom:1px solid gray;
+}
+
+.answerForm>span {
+	font-size: 16px;
+	color: gray;
+}
+
+.answerForm>textarea {
+	width: 90%;
+	height: 80px;
+	padding:3px;
+	margin:10px;
+	resize: none;
+}
+
+.answerForm>button {
+	margin-left: 75%;
+	margin-bottom: 20px;
+	width: 100px;
+	height: 30px;
+	border:0;
+	background-color: #0073dd;
+	color: white;
+}
+
+.answerForm>button:hover {
+	background-color: #1480e3;
+}
+
+.answerPanel {
+	width: 90%;
+	border: 1px solid gray;
+	padding:3px;
+	margin:10px;
+}
+
+.headImg {
+	width: 72px;
+}
+
+.answerUser {
+	height: 72px;
+	width: 100%;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #dddddd;
+}
+
+.answerUser>div {
+	float: left;
+}
+
+.answerUser .name {
+	color: gray;
+	margin-top: 8px;
+	margin-left: 15px;
+	font-size: 14px;
+}
+
+.answerUser .name>div {
+	float:left;
+	margin-top: 18px;
+}
+
+.answerUser .zanCtn {
+	float:right;
+}
+
+.zanCtn div {
+	width:50px;
+	height:100%;
+	float:right;
+	margin-left: 5px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.zanCtn button {
+	width:50px;
+	height: 50px;
+	font-size: 20px;
+	background-color: gray;
+	color: white;
+	border: 0;
+}
+
+.zanCtn .ding:hover {
+	background-color: #6aa71b;
+}
+
+.zanCtn .cai:hover {
+	background-color: #ce9d40;
+}
+
+.answerCommentBtnCtn {
+	padding-left: 60px;
+	padding-right: 10%;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+.answerCommentBtnCtn>a {
+	color: gray;
+	text-decoration: none;
+
+}
+
+.answerCommentBtnCtn>a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.answerCommentCtn {
+	padding:10px 30px 10px 30px;
+	color:gray;
+	font-size: 14px;
+}
+
+.answerCommentCtn>a {
+	color: gray;
+	text-decoration: none;
+}
+
+.answerCommentCtn>a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.answerCommentCtn>span {
+	margin-left: 20px;
+}

@@ -1,0 +1,11 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.ppticon {
+	font-family: 'ppticon';
+}

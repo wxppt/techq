@@ -1,0 +1,60 @@
+@font-face {
+ font-family: 'ppticon';
+ src: url('../fonts/icomoon.eot') format("embedded-opentype");
+ src: url('../fonts/icomoon.woff') format('woff'), 
+      url('../fonts/icomoon.ttf') format('truetype'), 
+      url('../fonts/icomoon.svg#ppticon') format('svg');
+}
+
+.registerPanel {
+	width: 100%;
+	min-height: 500px;
+	background-color: white;
+}
+
+.registerForm {
+	width: 600px;
+	margin-left: 300px;
+	margin-top: 20px;
+}
+
+.registerForm .formTitle {
+	text-align: right;
+	height: 60px;
+}
+
+.registerForm .formDesc {
+	font-size: 12px;
+	padding-left: 10px;
+	color: gray;
+}
+
+.registerForm tr {
+	height: 5px;
+}
+
+.registerForm .textInput {
+	width: 200px;
+	height: 26px;
+	margin-left: 30px;
+}
+
+.registerForm table table td {
+	height: 26px;
+}
+
+.goodAtChoice {
+	margin-left: 30px;
+	width: 200px;
+}
+
+.registerBtn {
+	width: 100px;
+	height: 30px;
+	margin: 40px 0px 0px 100px;
+}
+
+.registerBtnCtn {
+	width: 500px;
+	margin: auto;
+}
