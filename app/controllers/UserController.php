@@ -51,11 +51,27 @@ class UserController extends BaseController {
         $user->status = 0;
 
         if($user->save() == true) {
-            $this->session->set('auth', array(
+            $flag = true;
+            $goodAt = explode(",", $this->request->getpost("goodAt", "string"));
+            foreach($goodAt as $item) {
+                $newGoodAt = new UserTag();
+                $newGoodAt->uid = $user->uid;
+                $newGoodAt->tid = intval($item);
+                if(!$newGoodAt->save()) {
+                    $flag = false;
+                    break;
+                }
+            }
+            if($flag) {
+                $this->session->set('auth', array(
                 'uid' => $user->uid,
                 'role' => $user->role
-            ));
-            echo json_encode(array('fbCode' => 1, 'message' => '注册成功' ));
+                ));
+                echo json_encode(array('fbCode' => 1, 'message' => '注册成功' ));
+            } else {
+                $user->delete();
+                echo json_encode(array('fbCode' => -1, 'message' => '标签添加失败' ));
+            }
         } else {
             echo json_encode(array('fbCode' => -1, 'message' => '注册失败' ));
         }
@@ -69,7 +85,7 @@ class UserController extends BaseController {
                 echo json_encode(array('fbCode' => -1, 'message' => '不可以删除自己'));
             } else {
                 $user->delete();
-                echo json_encode(array('fbCode' => 0, 'message' => '删除成功'));
+                echo json_encode(array('fbCode' => 1, 'message' => '删除成功'));
             }
             
         } else {
@@ -79,7 +95,7 @@ class UserController extends BaseController {
 
     public function addAction() {
         $email = $this->request->getpost("email","email");
-        $password = $this->rquest->getpost("password");
+        $password = $this->request->getpost("password");
         $nickname = $this->request->getpost("nickname","string");
         $role = $this->request->getpost("role","int");
         $points = $this->request->getpost("points","int");
@@ -110,15 +126,12 @@ class UserController extends BaseController {
     public function updateAction() {
         $uid = $this->request->getpost("uid","int");
         $email = $this->request->getpost("email","email");
-        $password = $this->rquest->getpost("password");
         $nickname = $this->request->getpost("nickname","string");
         $role = $this->request->getpost("role","int");
         $points = $this->request->getpost("points","int");
         $status = $this->request->getpost("status","int");
 
         $user = User::findFirst("uid='$uid'");
-        $user->email = $email;
-        $user->password = md5($email ." ".$password);
         $user->nickname = $nickname;
         $user->points = $points;
         $user->role = $role;

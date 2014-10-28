@@ -33,23 +33,14 @@
                     <td colspan="2">
                         <table style="margin-left:30px;">
                             <tbody>
+                                {% for tagLine in tags %}
                                 <tr>
-                                    <td><input type="checkbox" name="goodAt" value="c">C</td>
-                                    <td><input type="checkbox" name="goodAt" value="cpp">C++</td>
-                                    <td><input type="checkbox" name="goodAt" value="java">Java</td>
-                                    <td><input type="checkbox" name="goodAt" value="python">Python</td>
+                                    {% for t in tagLine %}
+                                    <td><input type="checkbox" name="goodAt" value={{ t.tid }}>{{ t.name }}</td>
+                                    {% endfor %}
                                 </tr>
-                                <tr>
-                                    <td><input type="checkbox" name="goodAt" value="Perl">Perl</td>
-                                    <td><input type="checkbox" name="goodAt" value="Ruby">Ruby</td>
-                                    <td><input type="checkbox" name="goodAt" value="Basic">Basic</td>
-                                    <td><input type="checkbox" name="goodAt" value=".NET">.NET</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><input type="checkbox" name="goodAt" value="Javascript">Javascript</td>
-                                    <td><input type="checkbox" name="goodAt" value="Web">Web开发</td>
-                                    <td><input type="checkbox" name="goodAt" value="Other">Other</td>
-                                </tr>
+                                {% endfor %}
+                                
                             </tbody>
                         </table>
 

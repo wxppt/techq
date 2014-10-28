@@ -5,7 +5,9 @@ $(document).ready(function () {
             "top": parseInt(($(window).height() - $(".glassDiv").height()) / 2) + "px"
         });
     });
+});
 
+var initGlassDiv = function() {
     $(".glassDiv-cancel").click(hideGlassDiv);
 
     $(".glassDiv select").click(function() {
@@ -15,21 +17,22 @@ $(document).ready(function () {
             $(this).css({"color":"#a9a9a9"});
         }
     });
-});
+}
 
 var showGlassDiv = function () {
     $(".glassDiv").css({
         "left": parseInt(($(window).width() - $(".glassDiv").width()) / 2) + "px",
         "top": parseInt(($(window).height() - $(".glassDiv").height()) / 2) + "px"
     });
-    $(".smokeDiv").show();
-    $(".glassDiv").show();
+    $(".smokeDiv").fadeIn(200);
+    $(".glassDiv").fadeIn(200);
 
 }
 
 var hideGlassDiv = function () {
-    $(".smokeDiv").hide();
-    $(".glassDiv").hide();
-    $(".glassDiv input").val("");
-    $(".glassDiv select").val("default");
+    $(".smokeDiv").fadeOut(200);
+    $(".glassDiv").fadeOut(200,function() {
+        $(".glassDiv input").val("");
+        $(".glassDiv select").val("default");
+    });
 }

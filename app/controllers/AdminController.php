@@ -24,11 +24,23 @@ class AdminController extends BaseController {
 
     public function questionAction()
     {
-
+        $this->view->setVar("resolvedCount", Question::count(""));
+        $this->view->setVar("waitCount", Question::count(""));
+        $this->view->setVar("closeCount", Question::count(""));
     }
 
     public function tagAction()
     {
+        $tags = Tag::find();
+        $dispTags = array();
 
+        foreach($tags as $tag) {
+            array_push($dispTags, array(
+                'tid' => $tag->tid, 
+                'name' => $tag->name, 
+                'userCnt' => UserTag::count("tid='$tag->tid'"),
+                'quesCnt' => QuestionTag::count("tid='$tag->tid'")));
+        }
+        $this->view->setVar("tags", $dispTags);
     }
 }

@@ -16,8 +16,7 @@
     <div class="user-operation">
     	<button id="admin-user-add" style="margin-left:20px;">增</button>
     	<button id="admin-user-delete">删</button>
-    	<button>改</button>
-    	<button>封禁</button>
+    	<button id="admin-user-update">改</button>
     	<input placeholder="请输入搜索内容">
     </div>
 
