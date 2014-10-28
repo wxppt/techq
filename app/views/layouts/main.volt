@@ -13,7 +13,7 @@
             </div>
         </td>
         <td>
-            <a class="headerFunc undecorate" href="javascript:;" style="margin-left:20px;">我要提问</a>
+            <a class="headerFunc undecorate" href="/TechQ/ask" style="margin-left:20px;">我要提问</a>
         </td>
         </tr></tbody></table>
         </div>
@@ -41,7 +41,14 @@
     {% else %}
     <div class="userHead">
         <img src="/TechQ/images/3.png"></img>
-        <div class="userInfo">{{ username }}<span></span></div>
+        <div class="userInfo"><div class="userName">{{ username }}</div> <div class="userLevel">Lv1</div><br/>
+            <div class="userTag">
+                {% for t in goodAt %}
+                <a href="javascript:;">{{ t }}</a>
+                {% endfor %}
+            </div>
+            <div class="userCenterLink"><a href="#">进入个人中心</a></div>
+        </div>
     </div>
     <div class="userStatistics">
         <table>

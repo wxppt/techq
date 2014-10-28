@@ -1,8 +1,8 @@
 <?php
 
-class QuestionController extends BaseController {
+class AskController extends BaseController {
     protected function initialize() {
-        $this->tag->setTitle('问题');
+        $this->tag->setTitle('提问');
         parent::initialize();
     }
 

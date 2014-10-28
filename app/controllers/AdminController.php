@@ -1,7 +1,7 @@
 <?php
 
 class AdminController extends BaseController {
-	 protected function initialize() {
+	protected function initialize() {
         $this->tag->setTitle('控制台');
         parent::initialize();
     }

@@ -14,6 +14,13 @@ class BaseController extends \Phalcon\Mvc\Controller {
                 $curUser = User::findFirst("uid='$uid'");
                 $this->view->setVar("isLogin", true);
                 $this->view->setVar("username", $curUser->nickname);
+                $tags = UserTag::find("uid='$uid'");
+                $viewTags = array();
+                foreach($tags as $tag) {
+                    array_push($viewTags, Tag::findFirst("tid='$tag->tid'")->name);
+                }
+
+                $this->view->setVar("goodAt", $viewTags);
             } else {
                 $this->view->setVar("isLogin", false);
             }

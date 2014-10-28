@@ -37,6 +37,19 @@
 	float: left;
 }
 
+.userLevel {
+	font-size: 5px;
+	font-family: 宋体;
+	background-color: orange;
+	padding-bottom: 3px;
+	float:left;
+	padding: 0 5px 0 5px;
+	margin:3px 0 0 5px;
+	height:14px;
+	border-radius: 5px;
+	color: white;
+}
+
 .userStatistics {
 	width:100%;
 
@@ -53,4 +66,37 @@
 .userStatistics>table td {
 	text-align: center;
 	border-left: 1px solid #dddddd;
+}
+
+.userTag {
+	overflow: hidden;
+}
+
+.userTag>a {
+	color: white;
+	text-decoration: none;
+	font-family: 宋体;
+	font-size:9px;
+	background-color: #0c7adf;
+	padding: 2px 5px 2px 5px;
+	margin-right: 5px;
+	border-radius: 5px;
+}
+
+.userName {
+	float:left;
+	width:auto;
+}
+
+.userCenterLink {
+	margin-top:4px;
+}
+.userCenterLink>a {
+	font-size:9px;
+	color: #888888;
+	text-decoration: none;
+}
+
+.userCenterLink>a:hover {
+	color: #555555;
 }
