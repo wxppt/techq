@@ -14,6 +14,7 @@
         <?php echo $this->tag->stylesheetLink('styles/admin.css'); ?>
         <?php echo $this->tag->stylesheetLink('styles/ask.css'); ?>
         <?php echo $this->tag->javascriptInclude('scripts/jquery-1.11.1.min.js'); ?>
+        <?php echo $this->tag->javascriptInclude('scripts/heartcode-canvasloader-min-0.9.1.js'); ?>
         <?php echo $this->tag->javascriptInclude('scripts/global.js'); ?>
         <?php echo $this->tag->javascriptInclude('scripts/glass.js'); ?>
     </head>

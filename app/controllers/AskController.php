@@ -8,6 +8,7 @@ class AskController extends BaseController {
 
     public function indexAction()
     {
-        
+        $this->cookies->set('upPic', '', time() -1000);
     }
+
 }

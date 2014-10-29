@@ -97,3 +97,10 @@ $di->set('flash', function(){
 $di->set('elements', function(){
 	return new Elements();
 });
+
+
+$di->set('cookies', function() {
+    $cookies = new Phalcon\Http\Response\Cookies();
+    $cookies->useEncryption(false);
+    return $cookies;
+});

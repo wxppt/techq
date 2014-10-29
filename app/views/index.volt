@@ -14,6 +14,7 @@
         {{ stylesheet_link('styles/admin.css') }}
         {{ stylesheet_link('styles/ask.css') }}
         {{ javascript_include('scripts/jquery-1.11.1.min.js') }}
+        {{ javascript_include('scripts/heartcode-canvasloader-min-0.9.1.js') }}
         {{ javascript_include('scripts/global.js') }}
         {{ javascript_include('scripts/glass.js') }}
     </head>

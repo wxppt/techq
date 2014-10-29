@@ -138,10 +138,6 @@ class UserController extends BaseController {
         $user->status = $status;
 
         if($user->save() == true) {
-            $this->session->set('auth', array(
-                'uid' => $user->uid,
-                'role' => $user->role
-            ));
             echo json_encode(array('fbCode' => 1, 'message' => '修改成功' ));
         } else {
             echo json_encode(array('fbCode' => -1, 'message' => '修改失败' ));
