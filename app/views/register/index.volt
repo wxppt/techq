@@ -33,7 +33,7 @@
                     <td colspan="2">
                         <table style="margin-left:30px;">
                             <tbody>
-                                {% for tagLine in tags %}
+                                {% for tagLine in elements.getTagObjects() %}
                                 <tr>
                                     {% for t in tagLine %}
                                     <td><input type="checkbox" name="goodAt" value={{ t.tid }}>{{ t.name }}</td>

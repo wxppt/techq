@@ -21,4 +21,12 @@ $(document).ready(function() {
 	$(".indexNav").click(function() {
 		window.location = "/TechQ/" + $(this).attr("id").split("-")[0] + "/" + $(this).attr("id").split("-")[1];
 	});
+
+	$("input[class!='searchInput'],textarea").focus(function() {
+		$(this).css({"border":"1px solid #0c7adf"});
+	}); 
+
+	$("input[class!='searchInput'],textarea").blur(function() {
+		$(this).css({"border":"1px solid #888888"});
+	}); 
 });

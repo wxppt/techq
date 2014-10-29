@@ -1,6 +1,6 @@
-{{content()}}
+<?php echo $this->getContent(); ?>
 
-{{ javascript_include('scripts/ask.js') }}
+<?php echo $this->tag->javascriptInclude('scripts/ask.js'); ?>
 
 <div class="indexLeft">
     <div class="panelTitle">
@@ -30,13 +30,13 @@
                     <td>
                         <table>
                             <tbody>
-                                {% for tagLine in elements.getTagObjects() %}
+                                <?php foreach ($this->elements->getTagObjects() as $tagLine) { ?>
                                 <tr>
-                                    {% for t in tagLine %}
-                                    <td><input type="checkbox" name="goodAt" value={{ t.tid }}>{{ t.name }}</td>
-                                    {% endfor %}
+                                    <?php foreach ($tagLine as $t) { ?>
+                                    <td><input type="checkbox" name="goodAt" value=<?php echo $t->tid; ?>><?php echo $t->name; ?></td>
+                                    <?php } ?>
                                 </tr>
-                                {% endfor %}
+                                <?php } ?>
                             </tbody>
                         </table>
                     </td>

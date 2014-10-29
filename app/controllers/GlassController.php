@@ -17,4 +17,8 @@ class GlassController extends BaseController {
     public function updateTagAction() {
 
     }
+
+    public function uploadPictureAction() {
+
+    }
 }

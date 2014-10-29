@@ -13,7 +13,7 @@
             </div>
         </td>
         <td>
-            <a class="headerFunc undecorate" href="javascript:;" style="margin-left:20px;">我要提问</a>
+            <a class="headerFunc undecorate" href="/TechQ/ask" style="margin-left:20px;">我要提问</a>
         </td>
         </tr></tbody></table>
         </div>

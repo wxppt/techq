@@ -63,4 +63,21 @@ class Elements extends Component {
             break;
         }
     }
+
+    public function getTagObjects() {
+        $tags = Tag::find();
+        $tagGroup = array();
+        $counter = 0;
+        $index = -1;
+        foreach($tags as $tag) {
+            if($counter % 4==0) {
+                array_push($tagGroup, array());
+                $index++;
+            }
+            array_push($tagGroup[$index], $tag);
+            
+            $counter++;
+        }
+        return $tagGroup;
+    }
 }

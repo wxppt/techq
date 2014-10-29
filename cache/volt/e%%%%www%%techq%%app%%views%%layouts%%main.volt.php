@@ -13,7 +13,7 @@
             </div>
         </td>
         <td>
-            <a class="headerFunc undecorate" href="javascript:;" style="margin-left:20px;">我要提问</a>
+            <a class="headerFunc undecorate" href="/TechQ/ask" style="margin-left:20px;">我要提问</a>
         </td>
         </tr></tbody></table>
         </div>
@@ -40,8 +40,15 @@
     </div>
     <?php } else { ?>
     <div class="userHead">
-        <img src="images/3.png"></img>
-        <div class="userInfo"><?php echo $username; ?><span></span></div>
+        <img src="/TechQ/images/3.png"></img>
+        <div class="userInfo"><div class="userName"><?php echo $username; ?></div> <div class="userLevel">Lv1</div><br/>
+            <div class="userTag">
+                <?php foreach ($goodAt as $t) { ?>
+                <a href="javascript:;"><?php echo $t; ?></a>
+                <?php } ?>
+            </div>
+            <div class="userCenterLink"><a href="#">进入个人中心</a></div>
+        </div>
     </div>
     <div class="userStatistics">
         <table>
