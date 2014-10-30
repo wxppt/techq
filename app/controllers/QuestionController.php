@@ -10,7 +10,7 @@ class QuestionController extends BaseController {
         if ($this->request->hasFiles() == true) {
         	foreach ($this->request->getUploadedFiles() as $file) {
         		$nameArr = explode(".", $file->getName());
-        		$saveName = md5(date('Y-m-d H:i:s',time()) . $this->session->get('auth')['uid']) . '.' . $nameArr[count($nameArr)-1];
+        		$saveName = md5(date('Y-m-d H:i:s') . $this->session->get('auth')['uid']) . '.' . $nameArr[count($nameArr)-1];
         		$fbCode = 0;
         		$url = "";
         		$message = "";
@@ -131,9 +131,120 @@ class QuestionController extends BaseController {
         } else {
             echo json_encode(array('fbCode' => -1,'message'=> '用户未登录'));
         }
+    }
 
-        
+    public function deleteQuestionAction() {
+        $qid = $this->request->getpost("qid","int");
 
-        
+        $question = Question::findFirst("qid='$qid'");
+
+        if($question) {
+            if($question->delete()) {
+                echo parent::jsonFeedback(1);
+            } else {
+                echo parent::jsonFeedback(-1,"删除失败");
+            }
+        } else {
+            echo parent::jsonFeedback(-1,"找不到这个问题");
+        }
+    }
+
+    public function addDescAction() {
+        $qid = $this->request->getpost("qid","int");
+        $addDesc = $this->request->getpost("addDesc");
+
+        $question = Question::findFirst("qid='$qid'");
+
+        if($question) {
+            $question->add = $addDesc;
+            if($question->save()) {
+                echo parent::jsonFeedback(1);
+            } else {
+                echo parent::jsonFeedback(-1,"保存失败");
+            }
+        } else {
+            echo parent::jsonFeedback(-1,"找不到这个问题");
+        }
+    }
+
+    public function answerAction() {
+        $qid = $this->request->getpost("qid","int");
+        $content = $this->request->getpost("content");
+        $user = $this->session->get('auth');
+
+        if($user) {
+            $answer = new Answer();
+            $answer->uid = $user['uid'];
+            $answer->qid = $qid;
+            $answer->content = $content;
+            $answer->time = date('Y-m-d H:i:s');
+            if($answer->save()) {
+                echo parent::jsonFeedback(1);
+            } else {
+                echo parent::jsonFeedback(-1,"保存失败");
+            }
+        } else {
+            echo parent::jsonFeedback(-1,"您没有登录");
+        }
+    }
+
+    public function praiseAction() {
+        $aid = $this->request->getpost("aid","int");
+        $position = $this->request->getpost("position","int");
+        $user = $this->session->get('auth');
+
+        if($user) {
+            $uid = $user['uid'];
+
+            $position = $position>0?1:-1;
+            $check = Praise::findFirst("aid='$aid' AND uid='$uid' AND position='$position'");
+            if($check) {
+                echo parent::jsonFeedback(-1,"您已赞过");
+            } else {
+                $old = Praise::findFirst("aid='$aid' AND uid='$uid'");
+                if($old) {
+                    $old->delete();
+                }
+                $praise = new Praise();
+                $praise->aid=$aid;
+                $praise->uid=$uid;
+                $praise->position=$position;
+                if($praise->save()) {
+                    echo parent::jsonFeedback(1);
+                } else {
+                    echo parent::jsonFeedback(-1,"保存失败");
+                }
+            }
+        } else {
+            echo parent::jsonFeedback(-1,"您没有登录");
+        }
+    }
+
+    public function cancelAction() {
+        $aid = $this->request->getpost("aid","int");
+        $user = $this->session->get('auth');
+
+        if($user) {
+            $uid = $user['uid'];
+            $old = Praise::findFirst("aid='$aid' AND uid='$uid'");
+            if($old) {
+                $old->delete();
+                echo parent::jsonFeedback(1);
+            }
+        } else {
+            echo parent::jsonFeedback(-1,"您没有登录");
+        }
+    }
+
+    public function commentAction() {
+
+    }
+
+    public function questionResolvedAction() {
+
+    }
+
+    public function questionClosedAction() {
+
     }
 }

@@ -42,4 +42,9 @@ class BaseController extends \Phalcon\Mvc\Controller {
     {
         return false;
     }
+
+    protected function jsonFeedback($fbCode, $message="操作成功")
+    {
+        json_encode(array('fbCode' => $fbCode,'message'=> $message));
+    }
 }
